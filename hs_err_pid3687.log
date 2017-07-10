@@ -1,0 +1,30 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fff9a54d0dd, pid=3687, tid=1811
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_20-b26) (build 1.8.0_20-b26)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.20-b23 mixed mode bsd-amd64 compressed oops)
+# Problematic frame:
+# C  [libobjc.A.dylib+0x10dd]  objc_msgSend+0x1d
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f9fea06f000):  JavaThread "AppKit Thread" daemon [_thread_in_native, id=1811, stack(0x00007fff5d1b5000,0x00007fff5d9b5000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000018
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f9fec2227b0, RCX=0x0000000000000000, RDX=0x00007f9fec2227b0
+RSP=0x00007fff5d9afe38, RBP=0x00007fff5d9afe60, RSI=0x00007fff9523137c, RDI=0x00007f9fe9f71620
+R8 =0x0000000000000001, R9 =0x0000000000000001, R10=0x00007fff9523137c, R11=0x0000000000000000
+R12=0x0000000000000094, R13=0x00007f9fec2215c0, R14=0x00007f9fe9f71620, R15=0x00007fff5d9b0350
+RIP=0x00007fff9a54d0dd, EFLAGS=0x0000000000010246

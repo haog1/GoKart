@@ -1,0 +1,37 @@
+Student Number: 692216
+Student Name: Hao Gao
+
+Project 2 Reflection
+
+Implementation
+
+All features described in specification has been successfully implemented on this project work. All AI karts can correctly follow the way point, angles are also rotate correctly. At the mean time, each kart also has its own characteristics, such as changing acceleration according to the position between itself and player or chasing the player if it’s in a certain range. 
+
+Also, three items all works properly. Tomato can be thrown at a velocity of 1.7px/ms and both it and oil slick an make cars to spin for 0.7 seconds. And all items can only be picked up by player. Boost can help player to increase speed for 3 seconds with a higher acceleration.
+
+Additional Implementation 
+
+Besides all features mentioned above, I also created a drift functionality. At this moment, only player can drift by pressing and holding shift key. the kart will performs a drift as what we can see in real life. However, there still has flaw that I will discuss later in this reflection.
+
+Additionally, I set up a function to avoid cars crashed together. I set a 5-seconds-recover period. Every 5 seconds, computer checks if the karts have the same coordinates as the coordinates of 5 seconds ago. If yes, then reset the kart to the nearest way point which is behind the kart.
+
+Also, I added a timer at the left corner of the screen so that users can know their result when they finish. I feel details like this can improve user experience. So for a larger project that we may do in the future, details are the most important point to make the project preform perfect. 
+
+Difficulties
+
+Honestly, there are many places that I feel hard to cope with. Such as how kart rotates their angle automatically and correctly to follow the way point. Also, When player is using tomato or oil can. I was stuck on this part for a not short time, because I confused about the concepts of a good OO design principle and the principles of procedural language, like writing C programming language. 
+
+But those are not the main difficulty, for this stage, I stuck on how to make my drift function smoothly. I set two angles so that one can control the kart image and the other controls the real coordinate. this way can makes the car like drifting. However, after finish drift, loosing the shift key, the two angles need to set to the same and this causes frame skip and sometimes cars may shrink for few seconds.
+
+Improvements
+
+Actually, I have figured out why this happens, but I have not found out a way to fix it. So if I can do it again or I have more time working on it, I may choose to makes this better, since drift is the most important user experience for racing-game fans. Also, I want to make a functionality that can boost the car if the kart is continuously drifting without getting hit.
+
+Excepting this, Making the images more beautiful is also what I want to improve. For example, when kart is drifting or accelerating, the screen should show a different image that can imply to user that the kart is doing something special by adding some stuffs on the edges or wheels of kart.
+
+UML diagram
+
+initially, I did not write TomatoProj and OilSlick the two entities on my diagram. But while I was doing this part, I found that these two are necessary for me to implement functionalities of the two items. Since, for a good OO design, different object should be in different class and keep information hidden (encapsulation).
+
+Also, I write a particular class for reading way points and coordinates of items, which is not shown on my initial UML diagram. As the two reading functions are particular to any of class that I already have.
+
